@@ -26,5 +26,11 @@ Then, the verification commands may be ran:
 
 Continue on, from [section 3.2](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application).
 
+# Differences from *The Guide*
+What follows is the differences between this repository and the guide.
+### Section 3.2
+Starting in [version 5.1](https://guides.rubyonrails.org/5_1_release_notes.html#railties-notable-changes), the `rails new` command will initialize an empty *Git* repository.  A repository already existed, so the `--skip-git` flag was passed to `rails new`:
+- `$ rails new --skip-git blog`
+
 # Credits
 The work in this repository is the work of the team who wrote it on [RailsGuides](https://guides.rubyonrails.org/), please see the `LICENSE` file in this repository.
