@@ -5,35 +5,31 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/blog/.bundle
+/.bundle
 
 # Ignore the default SQLite database.
-/blog/db/*.sqlite3
-/blog/db/*.sqlite3-*
+/db/*.sqlite3
+/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/blog/log/*
-/blog/tmp/*
-!/blog/log/.keep
-!/blog/tmp/.keep
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/blog/tmp/pids/*
-!/blog/tmp/pids/
-!/blog/tmp/pids/.keep
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/blog/storage/*
-!/blog/storage/.keep
-/blog/tmp/storage/*
-!/blog/tmp/storage/
-!/blog/tmp/storage/.keep
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
 
-/blog/public/assets
+/public/assets
 
 # Ignore master key for decrypting credentials and more.
-/blog/config/master.key
-
-# Ignore emacs temporary files
-*~
-
+/config/master.key
