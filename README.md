@@ -29,7 +29,14 @@ Continue on, from [Section 3.2](https://guides.rubyonrails.org/getting_started.h
 # Notable Differences from *The Guide*
 What follows is the **notable** differences between this repository and the guide, starting from [Section 3.2](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application).
 
-*None so far*
+### Rails Development Server (*Puma*) within a *Docker Container*
+*Puma* by default only listens on `127.0.0.1`.  The web browser on the virtualization host will not be accessing *Puma* via the loopback interface, so *Puma* will drop connections accordingly.
+
+[Section 4.1](https://guides.rubyonrails.org/getting_started.html#starting-up-the-web-server) shows how to start *Puma*.  The `--binding` flag must be passed in order to allow clients outside of the *Docker container* to connect:
+
+- `$ bin/rails server --binding 0.0.0.0`
+
+Then, *Puma* may be accessed from a web browser (**from anywhere**) on port `3000`.
 
 # Credits
 The work in this repository is the work of the team who wrote it on [RailsGuides](https://guides.rubyonrails.org/), please see the `LICENSE` file in this repository.
