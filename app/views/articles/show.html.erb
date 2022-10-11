@@ -15,17 +15,7 @@
 <%# Section to show comments posted by other users %>
 <hr />
 <h2>Article Comments</h2>
-<% @article.comments.each do |comment| %>
-<p>
-  <strong>Commentor:</strong>
-  <%= comment.commenter %>
-</p>
-
-<p>
-  <strong>Comment</strong>
-  <%= comment.body %>
-</p>
-<% end %>
+<%= render(@article.comments) %>
 
 <%# Form for users to add their comments %>
 <hr />
