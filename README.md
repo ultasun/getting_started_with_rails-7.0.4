@@ -1,7 +1,7 @@
 # Getting Started with Rails
 The maintainer of this repository had decided it was time for them to renew their [*Rails*](https://rubyonrails.org) knowledge, and so what better place to start, than the latest edition **(v7.0.4)** of [Getting Started with Rails](https://guides.rubyonrails.org/getting_started.html)?
 
-The guide is completed up to section 11.
+The entire guide had been completed.
 
 # Docker
 One slight plot-twist found in this repository is, the maintainer of this repository develops 100% in *Docker* containers, so any variation from the official guide will be noted below.
