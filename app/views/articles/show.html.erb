@@ -1,3 +1,4 @@
+<%# Section to show the Article %>
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
 
@@ -10,3 +11,36 @@
        turbo_confirm: "Are you sure?"
       }) %>
 </p>
+
+<%# Section to show comments posted by other users %>
+<hr />
+<h2>Article Comments</h2>
+<% @article.comments.each do |comment| %>
+<p>
+  <strong>Commentor:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment</strong>
+  <%= comment.body %>
+</p>
+<% end %>
+
+<%# Form for users to add their comments %>
+<hr />
+<h2>Add your comment about this article:</h2>
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+<p>
+  <%= form.label :commenter %><br>
+  <%= form.text_field :commenter %>
+</p>
+<p>
+  <%= form.label :body %><br>
+  <%= form.text_area :body %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>
+
